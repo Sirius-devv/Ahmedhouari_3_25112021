@@ -1,2 +1,10 @@
+@import "base/base";
 
-   
+@import "layout/footer";  
+@import "pages/index";
+
+header{
+    & img{
+        height: 30px;
+     }
+}
