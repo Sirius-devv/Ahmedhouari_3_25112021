@@ -1,3 +1,30 @@
+@import "../utils/variables";
+
+
+@mixin accueil-h2 {
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px 0 26px 20px;
+}
+@mixin accueil-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    box-shadow:#dcdcdc 0px 2px 8px 1px;
+    width: 90%;
+    height: 70px;
+    margin:20px 0 0 20px;
+    color: $color-text-brightness;
+    background: $color-btn-header;
+    border-radius: 25px;
+}
+@mixin flex-align-justify__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 @mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
     text-shadow: $offset $offset $colour;
 }
@@ -44,4 +71,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+@mixin h2-{
+
 }

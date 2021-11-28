@@ -1,1 +1,120 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+.section__header {
+  border-top: #35353552 3px solid;
+  &__ville {
+    background: #eaeaea;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &-containers {
+      width: 42%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-family: $font-text;
+      font-size: 10px;
+      color: $colour-header;
+      & i {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+      }
+    }
+  }
+  & .presentation__explore {
+    padding-bottom: 11px;
+    height: 247px;
+    background: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-restaurant {
+      height: 180px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      & h3 {
+        font-size: 1.4rem;
+        width: 63%;
+        text-align: center;
+        font-family: $font-text;
+      }
+      & p {
+        font-family:$font-text;
+        width: 78%;
+        text-align: center;
+      }
+      & .btn__header {
+        border: none;
+        text-decoration: none;
+        background: $color-gradiente;
+        height: 46px;
+        width: 53%;
+        border-radius: 30px;
+        color: $color-btn-header;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+.main{
+    height: auto;
+   &__fonctionnement{
+      height: auto;
+      margin-top: 47px;
+      & h2{
+          @include accueil-h2;
+      }
+     & a{
+        @include accueil-btn;
+        & h3{
+          color: $color-number;
+          background: $colour-primary;
+          width: 30px;
+          height: 30px;
+          border-radius: 60px;
+          margin-left: -12px;
+          font-family: $font-text;
+          font-size: 15px;
+          @include flex-align-justify__center;
+        }
+        & i{
+          margin-left: $margin-number-icon;
+          font-size: 20px;
+        }
+        & #store{
+          font-size: 15px;
+        }
+        & p{
+          margin-left: $margin-number-icon;
+          color: black;
+          font-family: $font-text;
+          font-weight: bold;
+        }
+        &:hover{
+          background-color: #f2e8ff;
+          transition: 3s;
+          & i{
+            transition: 2s;
+            color: $colour-primary;
+          }
+        }
+     }
+     
 
+    }
+    &__Restaurant{
+      background: $color-3-accueil; 
+      margin-top: 68px;
+      PADDING-TOP: 47PX;
+      & h2{
+        @include accueil-h2;
+        margin-top: 0px;
+        
+      }
+    }
+}
