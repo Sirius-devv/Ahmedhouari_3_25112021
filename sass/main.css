@@ -73,6 +73,7 @@
 }
 
 .section__header__ville-containers {
+  max-width: 159px;
   width: 42%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,10 +146,11 @@
 }
 
 .section__header .presentation__explore-restaurant .btn__header {
+  max-width: 265px;
   border: none;
   text-decoration: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e252ffa4), to(#b41db4));
-  background: linear-gradient(#e252ffa4, #b41db4);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ed73da), to(#a65cdb));
+  background: linear-gradient(#ed73da, #a65cdb);
   height: 46px;
   width: 53%;
   border-radius: 30px;
@@ -187,6 +189,7 @@
   color: #7e7e7e;
   background: #f6f6f6;
   border-radius: 25px;
+  max-width: 546px;
 }
 
 .main__fonctionnement a h3 {
@@ -240,7 +243,7 @@
 .main__Restaurant {
   background: #f6f6f6;
   margin-top: 68px;
-  PADDING-TOP: 47PX;
+  padding-top: 47px;
 }
 
 .main__Restaurant h2 {
@@ -248,6 +251,69 @@
   font-family: 'Roboto', sans-serif;
   margin: 0px 0 26px 20px;
   margin-top: 0px;
+}
+
+.main__Restaurant .containers__accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 66px;
+}
+
+.main__Restaurant .containers__accueil__card {
+  height: auto;
+  width: 90%;
+  background: #ffffff;
+  border-radius: 17px 17px 17px 17px;
+  margin-top: 20px;
+  max-width: 500px;
+}
+
+.main__Restaurant .containers__accueil__card a {
+  text-decoration: none;
+}
+
+.main__Restaurant .containers__accueil__card a:visited {
+  color: black;
+}
+
+.main__Restaurant .containers__accueil__card a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.main__Restaurant .containers__accueil__card a .underpictures__accueil {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  padding: 15px;
+  position: relative;
+}
+
+.main__Restaurant .containers__accueil__card a .underpictures__accueil h3 {
+  font-size: 1.2rem;
+}
+
+.main__Restaurant .containers__accueil__card a .underpictures__accueil p {
+  margin-top: 6px;
+}
+
+.main__Restaurant .containers__accueil__card a .underpictures__accueil i {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  font-size: 1.5rem;
 }
 
 header {

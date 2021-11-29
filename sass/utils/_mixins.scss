@@ -24,6 +24,39 @@
     justify-content: center;
 }
 
+@mixin containers-card-accueil{
+    height: auto;
+    width: 90%;
+    background: #ffffff;
+    border-radius: 17px 17px 17px 17px;
+    margin-top: 20px;
+}
+@mixin img-accueil {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0px 0px;
+}
+@mixin animation-heart {
+    background: orange;
+    animation: heart 4s forwards  ;
+    transform: scaleY(0);
+    height: 30px;
+    width: 30px;
+    @keyframes heart {
+        10%{
+            transform: scaleY(0.5);
+        }
+        100%{
+            transform: scaleY(1);
+        }
+    }
+}
+
+
+
+
+
 
 @mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
     text-shadow: $offset $offset $colour;

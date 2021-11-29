@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     &-containers {
+      max-width: 159px;
       width: 42%;
       display: flex;
       justify-content: space-around;
@@ -44,11 +45,12 @@
         font-family: $font-text;
       }
       & p {
-        font-family:$font-text;
+        font-family: $font-text;
         width: 78%;
         text-align: center;
       }
       & .btn__header {
+        max-width: 265px;
         border: none;
         text-decoration: none;
         background: $color-gradiente;
@@ -61,60 +63,97 @@
     }
   }
 }
-.main{
+.main {
+  height: auto;
+  &__fonctionnement {
     height: auto;
-   &__fonctionnement{
-      height: auto;
-      margin-top: 47px;
-      & h2{
-          @include accueil-h2;
+    margin-top: 47px;
+    & h2 {
+      @include accueil-h2;
+    }
+    & a {
+      @include accueil-btn;
+      max-width: 546px;
+      & h3 {
+        color: $color-number;
+        background: $colour-primary;
+        width: 30px;
+        height: 30px;
+        border-radius: 60px;
+        margin-left: -12px;
+        font-family: $font-text;
+        font-size: 15px;
+        @include flex-align-justify__center;
       }
-     & a{
-        @include accueil-btn;
-        & h3{
-          color: $color-number;
-          background: $colour-primary;
-          width: 30px;
-          height: 30px;
-          border-radius: 60px;
-          margin-left: -12px;
-          font-family: $font-text;
-          font-size: 15px;
-          @include flex-align-justify__center;
+      & i {
+        margin-left: $margin-number-icon;
+        font-size: 20px;
+      }
+      & #store {
+        font-size: 15px;
+      }
+      & p {
+        margin-left: $margin-number-icon;
+        color: black;
+        font-family: $font-text;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: #f2e8ff;
+        transition: 3s;
+        & i {
+          transition: 2s;
+          color: $colour-primary;
         }
-        & i{
-          margin-left: $margin-number-icon;
-          font-size: 20px;
-        }
-        & #store{
-          font-size: 15px;
-        }
-        & p{
-          margin-left: $margin-number-icon;
-          color: black;
-          font-family: $font-text;
-          font-weight: bold;
-        }
-        &:hover{
-          background-color: #f2e8ff;
-          transition: 3s;
-          & i{
-            transition: 2s;
-            color: $colour-primary;
+      }
+    }
+  }
+  &__Restaurant {
+    background: $color-3-accueil;
+    margin-top: 68px;
+    padding-top: 47px;
+    & h2 {
+      @include accueil-h2;
+      margin-top: 0px;
+    }
+    & .containers__accueil {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: 66px;
+      &__card {
+        @include containers-card-accueil;
+        max-width: 500px;
+
+        & a {
+          text-decoration: none;
+          &:visited {
+            color: black;
+          }
+          & img {
+            @include img-accueil;
+          }
+          & .underpictures__accueil {
+            font-family: $font-text;
+            color: black;
+            padding: 15px;
+            position: relative;
+            & h3 {
+              font-size: 1.2rem;
+            }
+            & p {
+              margin-top: 6px;
+            }
+            & i {
+              position: absolute;
+              top: 30px;
+              right: 20px;
+              font-size: 1.5rem;
+            }
           }
         }
-     }
-     
-
-    }
-    &__Restaurant{
-      background: $color-3-accueil; 
-      margin-top: 68px;
-      PADDING-TOP: 47PX;
-      & h2{
-        @include accueil-h2;
-        margin-top: 0px;
-        
       }
     }
+  }
 }
