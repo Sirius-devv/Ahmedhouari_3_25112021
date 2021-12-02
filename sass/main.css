@@ -98,7 +98,7 @@
   font-size: 15px;
 }
 
-.section__header .presentation__explore {
+.section__header__presentation__explore {
   padding-bottom: 11px;
   height: 247px;
   background: #f6f6f6;
@@ -114,7 +114,7 @@
           justify-content: center;
 }
 
-.section__header .presentation__explore-restaurant {
+.section__header__presentation__explore__restaurant {
   height: 180px;
   width: 100%;
   display: -webkit-box;
@@ -132,21 +132,21 @@
           align-items: center;
 }
 
-.section__header .presentation__explore-restaurant h3 {
+.section__header__presentation__explore__restaurant h3 {
   font-size: 1.4rem;
   width: 63%;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
 
-.section__header .presentation__explore-restaurant p {
+.section__header__presentation__explore__restaurant p {
   font-family: "Roboto", sans-serif;
   width: 78%;
   text-align: center;
 }
 
-.section__header .presentation__explore-restaurant .btn__header {
-  max-width: 265px;
+.section__header__presentation__explore__restaurant__btn__header {
+  max-width: 310px;
   border: none;
   text-decoration: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#ed73da), to(#a65cdb));
@@ -156,6 +156,14 @@
   border-radius: 30px;
   color: #f6f6f6;
   font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.section__header__presentation__explore__restaurant__btn__header:hover {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .main {
@@ -189,7 +197,6 @@
   color: #7e7e7e;
   background: #f6f6f6;
   border-radius: 25px;
-  max-width: 546px;
 }
 
 .main__fonctionnement a h3 {
@@ -253,7 +260,7 @@
   margin-top: 0px;
 }
 
-.main__Restaurant .containers__accueil {
+.main__Restaurant__containers__accueil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,24 +276,70 @@
   padding-bottom: 66px;
 }
 
-.main__Restaurant .containers__accueil__card {
+.main__Restaurant__containers__accueil__card {
   height: auto;
   width: 90%;
   background: #ffffff;
   border-radius: 17px 17px 17px 17px;
   margin-top: 20px;
   max-width: 500px;
+  position: relative;
 }
 
-.main__Restaurant .containers__accueil__card a {
+.main__Restaurant__containers__accueil__card:nth-child(1)::before {
+  content: "Nouveau";
+  background: #99e2d0;
+  position: absolute;
+  color: #008766;
+  right: 15px;
+  top: 15px;
+  z-index: 3;
+  width: 78px;
+  height: 31px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__Restaurant__containers__accueil__card:nth-child(2)::before {
+  content: "Nouveau";
+  background: #99e2d0;
+  position: absolute;
+  color: #008766;
+  right: 15px;
+  top: 15px;
+  z-index: 3;
+  width: 78px;
+  height: 31px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__Restaurant__containers__accueil__card a {
   text-decoration: none;
+  position: relative;
 }
 
-.main__Restaurant .containers__accueil__card a:visited {
+.main__Restaurant__containers__accueil__card a:visited {
   color: black;
 }
 
-.main__Restaurant .containers__accueil__card a img {
+.main__Restaurant__containers__accueil__card a img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -294,26 +347,81 @@
   border-radius: 15px 15px 0px 0px;
 }
 
-.main__Restaurant .containers__accueil__card a .underpictures__accueil {
-  font-family: "Roboto", sans-serif;
-  color: black;
-  padding: 15px;
+.main__Restaurant__containers__accueil__card a .underpictures__accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   position: relative;
+  border-radius: 0 0 12px 12px;
+  padding: 11px 20px 15px 14px;
+  font-family: "Roboto", sans-serif;
 }
 
-.main__Restaurant .containers__accueil__card a .underpictures__accueil h3 {
+.main__Restaurant__containers__accueil__card a .underpictures__accueil__description h3 {
   font-size: 1.2rem;
 }
 
-.main__Restaurant .containers__accueil__card a .underpictures__accueil p {
+.main__Restaurant__containers__accueil__card a .underpictures__accueil__description p {
   margin-top: 6px;
 }
 
-.main__Restaurant .containers__accueil__card a .underpictures__accueil i {
+.main__Restaurant__containers__accueil__card a .underpictures__accueil__svg {
+  position: relative;
+  right: 34px;
+  bottom: 21px;
+}
+
+.main__Restaurant__containers__accueil__card a .underpictures__accueil__svg svg {
   position: absolute;
-  top: 30px;
-  right: 20px;
-  font-size: 1.5rem;
+  width: 28px;
+  height: 28px;
+}
+
+.main__Restaurant__containers__accueil__card a .underpictures__accueil__svg__heart-full {
+  z-index: 2;
+  fill: transparent;
+}
+
+.main__Restaurant__containers__accueil__card a .underpictures__accueil__svg__heart-full:active {
+  -webkit-animation: animation-heart 500ms ease-in-out forwards;
+          animation: animation-heart 500ms ease-in-out forwards;
+}
+
+@-webkit-keyframes animation-heart {
+  0% {
+    -webkit-transform: scaleX(0) scaleY(0);
+            transform: scaleX(0) scaleY(0);
+    fill: url(#grandiente-heart);
+  }
+  100% {
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+    fill: url(#grandiente-heart);
+  }
+}
+
+@keyframes animation-heart {
+  0% {
+    -webkit-transform: scaleX(0) scaleY(0);
+            transform: scaleX(0) scaleY(0);
+    fill: url(#grandiente-heart);
+  }
+  100% {
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+    fill: url(#grandiente-heart);
+  }
+}
+
+.main__Restaurant__containers__accueil__card a .underpictures__accueil__svg__heart {
+  z-index: 1;
 }
 
 header {
@@ -325,6 +433,18 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   height: 60px;
+}
+
+header a:visited {
+  color: black;
+}
+
+header a i {
+  color: #353535;
+  position: absolute;
+  left: 22px;
+  font-size: 21px;
+  top: 17px;
 }
 
 header h1 {
@@ -342,5 +462,175 @@ header h1 {
 
 header h1 img {
   height: 30px;
+}
+
+main .img__main {
+  top: 57px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+main .img__main img {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  MIN-HEIGHT: 359px;
+  MAX-HEIGHT: 359px;
+}
+
+main .section {
+  padding-bottom: 11vh;
+  background: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  margin-top: 42vh;
+}
+
+main .section__title__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 36px 30px 0 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .section__title__menu h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.6rem;
+}
+
+main .section__title__menu__icon {
+  position: relative;
+  right: 82px;
+  bottom: 16px;
+}
+
+main .section__title__menu__icon svg {
+  height: 32px;
+  width: 57px;
+  position: absolute;
+}
+
+main .section__title__menu__icon__full-heart {
+  fill: transparent;
+  z-index: 2;
+}
+
+main .section__title__menu__icon__full-heart:active {
+  -webkit-animation: animation-heart 500ms ease-in-out forwards;
+          animation: animation-heart 500ms ease-in-out forwards;
+}
+
+@keyframes animation-heart {
+  0% {
+    -webkit-transform: scaleX(0) scaleY(0);
+            transform: scaleX(0) scaleY(0);
+    fill: url(#grandiente-heart);
+  }
+  100% {
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+    fill: url(#grandiente-heart);
+  }
+}
+
+main .section__title__menu__icon__empty-heart {
+  z-index: 1;
+}
+
+main .section__containers__menu {
+  padding: 0px 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+main .section__containers__menu__title {
+  margin: 40px 0 0PX 10px;
+}
+
+main .section__containers__menu__title h3 {
+  font-size: 1rem;
+}
+
+main .section__containers__menu__title__bottom {
+  border-bottom: 3px solid #99e2d0;
+  margin-top: 8px;
+  width: 35px;
+}
+
+main .section__containers__menu__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.041) 0px 1px 8px 3px;
+          box-shadow: rgba(0, 0, 0, 0.041) 0px 1px 8px 3px;
+  margin-top: 12px;
+  border-radius: 12px;
+  padding: 10px 20px 10px 10px;
+}
+
+main .section__containers__menu__cards__h3-p h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+main .section__containers__menu__cards__h3-p p {
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+main .section__containers__menu__cards .price {
+  font-weight: bold;
+}
+
+main .section__btn-menu {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .section__btn-menu button {
+  max-width: 310px;
+  border: none;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ed73da), to(#a65cdb));
+  background: linear-gradient(#ed73da, #a65cdb);
+  height: 46px;
+  width: 53%;
+  border-radius: 30px;
+  color: #f6f6f6;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+main .section__btn-menu button:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

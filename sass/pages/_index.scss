@@ -1,5 +1,8 @@
 @import "../utils/variables";
 @import "../utils/mixins";
+
+
+
 .section__header {
   border-top: #35353552 3px solid;
   &__ville {
@@ -24,14 +27,14 @@
       }
     }
   }
-  & .presentation__explore {
+  &__presentation__explore {
     padding-bottom: 11px;
     height: 247px;
     background: #f6f6f6;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &-restaurant {
+    &__restaurant {
       height: 180px;
       width: 100%;
       display: flex;
@@ -49,16 +52,14 @@
         width: 78%;
         text-align: center;
       }
-      & .btn__header {
-        max-width: 265px;
-        border: none;
-        text-decoration: none;
-        background: $color-gradiente;
-        height: 46px;
-        width: 53%;
-        border-radius: 30px;
-        color: $color-btn-header;
-        font-size: 0.9rem;
+      &__btn__header {
+       @include btn-brightness;
+        cursor: pointer;
+        opacity: 0.9;
+        &:hover{
+          opacity: 1;
+          transition: 1s;
+        }
       }
     }
   }
@@ -73,7 +74,7 @@
     }
     & a {
       @include accueil-btn;
-      max-width: 546px;
+      
       & h3 {
         color: $color-number;
         background: $colour-primary;
@@ -116,7 +117,7 @@
       @include accueil-h2;
       margin-top: 0px;
     }
-    & .containers__accueil {
+    &__containers__accueil {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -125,9 +126,19 @@
       &__card {
         @include containers-card-accueil;
         max-width: 500px;
+        position: relative;
+        &:nth-child(1)::before{
+          @include containers-after;
+          @include flex-align-justify__center
+        }
+        &:nth-child(2)::before{
+          @include containers-after;
+          @include flex-align-justify__center
+        }
 
         & a {
           text-decoration: none;
+          position: relative;
           &:visited {
             color: black;
           }
@@ -135,22 +146,37 @@
             @include img-accueil;
           }
           & .underpictures__accueil {
-            font-family: $font-text;
-            color: black;
-            padding: 15px;
-            position: relative;
-            & h3 {
+            @include underpic-accueil;
+            &__description{
+              & h3 {
               font-size: 1.2rem;
             }
             & p {
               margin-top: 6px;
             }
-            & i {
-              position: absolute;
-              top: 30px;
-              right: 20px;
-              font-size: 1.5rem;
             }
+            
+           &__svg{
+             position:relative;
+             right: 34px;
+             bottom: 21px;
+             & svg{
+               position: absolute;
+               width: 28px;
+               height: 28px;
+             }
+             &__heart-full{
+               z-index: 2;
+               fill: transparent;
+               &:active{
+                 @include animation-heart;
+
+               }
+             }
+             &__heart{
+               z-index: 1;
+             }
+           }
           }
         }
       }

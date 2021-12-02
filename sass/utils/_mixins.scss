@@ -1,11 +1,13 @@
 @import "../utils/variables";
-
+@import "../utils/functions";
+ 
 
 @mixin accueil-h2 {
     font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
     margin: 0px 0 26px 20px;
 }
+
 @mixin accueil-btn {
     display: flex;
     align-items: center;
@@ -31,11 +33,34 @@
     border-radius: 17px 17px 17px 17px;
     margin-top: 20px;
 }
+@mixin containers-after {
+          content: "Nouveau";
+          background: $color-after;
+          position: absolute;
+          color: $color-after-text;
+          right: 15px;
+          top: 15px;
+          z-index: 3;
+          width: 78px;
+          height: 31px;
+          border-radius: 5px;
+}
 @mixin img-accueil {
     object-fit: cover;
     width: 100%;
     height: auto;
     border-radius: 15px 15px 0px 0px;
+}
+@mixin underpic-accueil {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    padding: 11px 20px 15px 14px;
+    font-family: $font-text;
+    
 }
 @mixin animation-heart {
     background: orange;
@@ -52,6 +77,91 @@
         }
     }
 }
+@mixin visited {
+    &:visited{
+        color: black;
+    }
+    
+}
+@mixin card-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    width: 100%;
+    position: relative;
+    background-color: $background-card;
+    box-shadow: $dark 0px 1px 8px 3px;
+    margin-top: 12px;
+    border-radius: 12px;
+    padding: 10px 20px 10px 10px;
+}
+
+
+@mixin btn-brightness {
+    max-width: 310px;
+    border: none;
+    text-decoration: none;
+    background: $color-gradiente;
+    height: 46px;
+    width: 53%;
+    border-radius: 30px;
+    color: $color-btn-header;
+    font-size: 0.9rem;
+    
+}
+
+@mixin svg-menu {
+
+    height: 32px;
+    width: 57px;
+    position: absolute;
+    
+}
+@mixin animation-heart {
+    animation: animation-heart 500ms ease-in-out forwards;
+    @keyframes animation-heart {
+        0%{
+
+            transform: scaleX(0) scaleY(0);
+            fill: url(#grandiente-heart);
+        }
+       
+        100%{
+            transform: scaleX(1) scaleY(1);
+            fill: url(#grandiente-heart);
+        }
+    }
+    }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

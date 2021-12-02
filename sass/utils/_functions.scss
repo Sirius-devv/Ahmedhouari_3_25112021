@@ -1,7 +1,12 @@
-@function lightness-shift($colour) {
-    @if (lightness($colour) < 25%){
+
+@import "../utils/variables"; 
+
+@function lightness-shift($colour:$color-gradiente){
+     @if ( lightness($colour) < 25% ) {
         @return lighten($colour, 10%);
-    }@else{
+}@else{
         @return darken($colour, 10%);
     }
 }
+
+
