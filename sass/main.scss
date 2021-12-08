@@ -2,150 +2,170 @@
 @import "base/base";
 @import "utils/functions";
 @import "utils/mixins";
-@import "layout/footer";  
+@import "layout/footer";
 @import "pages/index";
 
-
-
-header{
-    width: 100%;
+header {
+  min-width: 240px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  & a {
+    @include visited;
+    & i {
+      color: $colour-header;
+      position: absolute;
+      left: 22px;
+      font-size: 21px;
+      top: 17px;
+    }
+  }
+  & h1 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 60px;
-    & a{
-        @include visited;
-        & i{
-        color: $colour-header;
-        position: absolute;
-        left: 22px;
-        font-size: 21px;
-        top: 17px; 
-        }
-        
+    & img {
+      height: 30px;
     }
-    & h1{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-         & img{
-        height: 30px; 
-
+  }
 }
+main {
+  .img__main {
+    min-width: 240px;
+    top: 57px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    & img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      min-height: 359px;
+      max-height: 359px;
     }
+  }
+  .section {
+    min-width: 240px;
+    padding-bottom: 11vh;
+    background: $color-3-accueil;
+    border-radius: 40px 40px 0 0;
+    margin-top: 40vh;
+    &__title__menu {
+      display: flex;
+      padding: 36px 30px 0 30px;
+      justify-content: space-between;
+      align-items: center;
+      & h2 {
+        font-family: $font-title;
+        font-size: 1.6rem;
+      }
+      &__icon {
+        position: relative;
+        right: 64px;
+        bottom: 16px;
 
-}
-main{
-    
-    .img__main{
-        
-        top: 57px;
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        & img{
-            height: auto;
-            width: 100%;
-            object-fit: cover;
-            MIN-HEIGHT: 359px;
-            MAX-HEIGHT: 359px;
-          
-            
+        & svg {
+          @include svg-menu;
         }
+
+        &__full-heart {
+          fill: transparent;
+          z-index: 2;
+          &:active {
+            @include animation-heart;
+          }
+        }
+        &__empty-heart {
+          z-index: 1;
+        }
+      }
     }
-    .section{
-        padding-bottom: 11vh;
-        background: $color-3-accueil;
-        border-radius: 40px 40px 0 0;
-        margin-top: 42vh;
-        
-       
-        &__title__menu{
-            display: flex;
-            padding: 36px 30px 0 30px;
-            justify-content: space-between;
-            align-items: center;
-            & h2{
-               
-                font-family: $font-title;
-                font-size: 1.6rem;
-            }
-            &__icon{
-                position: relative;
-                right: 82px;
-                bottom: 16px;
-
-                & svg{
-                    @include svg-menu;
-                }
-            
-                &__full-heart{      
-                    fill: transparent; 
-                    z-index: 2;   
-                    &:active{
-                        @include animation-heart;
-                    }       
-                }
-                &__empty-heart{
-                    z-index: 1;
-                }
-            
-            }
-           
+    &__containers__menu {
+      padding: 0px 24px;
+      font-family: $font-text;
+      &__title {
+        margin: $margin-menu-containers-title;
+        & h3 {
+          font-size: 1rem;
         }
-        &__containers__menu{
-            padding: 0px 24px;
+        &__bottom {
+          border-bottom: 3px solid $color-animation-menu;
+          margin-top: 8px;
+          width: 35px;
+        }
+      }
+      &__cards {
+        @include card-menu;
+        cursor: pointer;
+        &:active {
+          & .section__containers__menu__cards__h3-p {
+            @include animation-h3-p;
+          }
+          & .section__containers__menu__cards__i {
+            @include animation-icon-green;
+          }
+          & i {
+            @include animation-valid-rotate;
+          }
+        }
+        &__h3-p {
+          width: 83%;
+          height: 100%;
+          padding: 10px 0 10px 10px;
+          & h3 {
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+          }
+          & p {
             font-family: $font-text;
-            &__title{
-               margin:$margin-menu-containers-title ; 
-               & h3{
-                   font-size: 1rem;
-               }
-               &__bottom{
-                   border-bottom: 3px solid $color-animation-menu;
-                   margin-top: 8px;
-                   width: 35px;
-               }
-
-            }
-            &__cards{
-               @include card-menu;
-               &__h3-p{
-                   & h3{
-                    font-weight: bold;
-                    font-size: 1.1rem;
-                }
-                & p{
-                    margin-top: 4px;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
-                    overflow: hidden;
-                }
-               }
-                
-                & .price{
-                 font-weight: bold;
-                }
-            }
+            font-size: 0.9rem;
+            margin-top: 4px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            font-weight: bold;
+            opacity: 0.8;
+          }
         }
- 
-        
-        &__btn-menu{
-            margin-top: 48px;
-            @include flex-align-justify__center;
-                button{
-                    @include btn-brightness; 
-                    opacity: 0.8;
-                    cursor: pointer;
-                    &:hover {
-                        transition: 1s;
-                        opacity: 1;
-                        
-                        
-                      }
-                }
-              
+        & .price {
+          font-weight: bold;
+          width: 10%;
+          height: 100%;
+          padding-top: 30px;
         }
+        &__i {
+          overflow: hidden;
+          height: 100%;
+          width: 0%;
+          background: $colour-tertiaire;
+          border-radius: 0 12px 12px 0;
+          @include flex-align-justify__center;
+          & i {
+            font-size: 1.7rem;
+            color: white;
+          }
+        }
+      }
     }
+
+    &__btn-menu {
+      margin-top: 48px;
+      @include flex-align-justify__center;
+      button {
+        @include btn-brightness;
+        opacity: 0.7;
+        cursor: pointer;
+        &:hover {
+          transition: 1s;
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
-  

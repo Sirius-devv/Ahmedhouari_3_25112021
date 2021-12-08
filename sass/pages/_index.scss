@@ -1,10 +1,41 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+      //  loading-spinner
+.loading__spinner__containers {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  @include flex-align-justify__center;
+  @include animation-background-spinner;
+  
 
-
+  &__position {
+    background: transparent;
+    height: 250px;
+    width: 250px;
+    position: fixed;
+    cursor: pointer;
+    @include flex-align-justify__center;
+    &__animation {
+      background: transparent;
+      height: 100px;
+      width: 100px;
+      border: 4px solid transparent;
+      border-radius: 50px;
+      border-top: $border-loading $colour-primary;
+      border-bottom: $border-loading  $color-loading;
+      border-left: $border-loading  $color-loading;
+      border-right: $border-loading  $color-loading;
+      @include animation-spinner;
+    }
+  }
+}
+      // header
 .section__header {
-  border-top: #35353552 3px solid;
+  min-width: 240px;
+  border-top: $color-fourth 3px solid;
   &__ville {
     background: #eaeaea;
     height: 45px;
@@ -13,7 +44,7 @@
     justify-content: center;
     &-containers {
       max-width: 159px;
-      width: 42%;
+      width: 50%;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -25,12 +56,22 @@
         align-items: center;
         font-size: 15px;
       }
+      &__input {
+        font-size: 0.9rem;
+        width: 82%;
+        height: 40px;
+        border: none;
+        background: #eaeaea;
+        font-family: $font-text;
+        font-weight: bold;
+        color: #353535;
+      }
     }
   }
   &__presentation__explore {
     padding-bottom: 11px;
     height: 247px;
-    background: #f6f6f6;
+    background: $background--1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,10 +94,10 @@
         text-align: center;
       }
       &__btn__header {
-       @include btn-brightness;
+        @include btn-brightness;
         cursor: pointer;
-        opacity: 0.9;
-        &:hover{
+        opacity: 0.8;
+        &:hover {
           opacity: 1;
           transition: 1s;
         }
@@ -64,8 +105,11 @@
     }
   }
 }
+// main
 .main {
+  min-width: 240px;
   height: auto;
+  // fonctionnement-1
   &__fonctionnement {
     height: auto;
     margin-top: 47px;
@@ -74,7 +118,7 @@
     }
     & a {
       @include accueil-btn;
-      
+
       & h3 {
         color: $color-number;
         background: $colour-primary;
@@ -109,6 +153,7 @@
       }
     }
   }
+  // restaurant-2
   &__Restaurant {
     background: $color-3-accueil;
     margin-top: 68px;
@@ -127,13 +172,13 @@
         @include containers-card-accueil;
         max-width: 500px;
         position: relative;
-        &:nth-child(1)::before{
+        &:nth-child(1)::before {
           @include containers-after;
-          @include flex-align-justify__center
+          @include flex-align-justify__center;
         }
-        &:nth-child(2)::before{
+        &:nth-child(2)::before {
           @include containers-after;
-          @include flex-align-justify__center
+          @include flex-align-justify__center;
         }
 
         & a {
@@ -147,36 +192,34 @@
           }
           & .underpictures__accueil {
             @include underpic-accueil;
-            &__description{
+            &__description {
               & h3 {
-              font-size: 1.2rem;
+                font-size: 1.2rem;
+              }
+              & p {
+                margin-top: 6px;
+              }
             }
-            & p {
-              margin-top: 6px;
+          }
+        }
+        &__svg {
+          position: absolute;
+          left: 83%;
+          bottom: 56px;
+          & svg {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+          }
+          &__heart-full {
+            z-index: 2;
+            fill: transparent;
+            &:active {
+              @include animation-heart;
             }
-            }
-            
-           &__svg{
-             position:relative;
-             right: 34px;
-             bottom: 21px;
-             & svg{
-               position: absolute;
-               width: 28px;
-               height: 28px;
-             }
-             &__heart-full{
-               z-index: 2;
-               fill: transparent;
-               &:active{
-                 @include animation-heart;
-
-               }
-             }
-             &__heart{
-               z-index: 1;
-             }
-           }
+          }
+          &__heart {
+            z-index: 1;
           }
         }
       }

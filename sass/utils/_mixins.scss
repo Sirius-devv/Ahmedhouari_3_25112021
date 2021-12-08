@@ -4,7 +4,7 @@
 
 @mixin accueil-h2 {
     font-size: 1.3rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-text;
     margin: 0px 0 26px 20px;
 }
 
@@ -40,7 +40,7 @@
           color: $color-after-text;
           right: 15px;
           top: 15px;
-          z-index: 3;
+          z-index: 2;
           width: 78px;
           height: 31px;
           border-radius: 5px;
@@ -86,14 +86,15 @@
 @mixin card-menu {
     display: flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items:center;
     width: 100%;
+    height: 64px;
     position: relative;
     background-color: $background-card;
     box-shadow: $dark 0px 1px 8px 3px;
     margin-top: 12px;
     border-radius: 12px;
-    padding: 10px 20px 10px 10px;
+    padding: 0;
 }
 
 
@@ -132,6 +133,98 @@
         }
     }
     }
+    @mixin animation-h3-p {
+            animation: animation-h3p 1s forwards;
+        @keyframes animation-h3p  {
+            0%{
+                width: 83%;
+            }
+            100%{
+                width: 70%;
+            }
+        }
+    
+        
+    }
+    @mixin animation-icon-green {
+        animation: animation-icon__valid 1s forwards ease-in-out;
+    @keyframes animation-icon__valid  {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 20%;
+        }
+    }
+
+    
+}
+@mixin animation-valid-rotate {
+    animation: rotate-valid 1s forwards ease-in-out;
+    @keyframes rotate-valid {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
+    }
+}
+@mixin animation-background-spinner {
+    
+    animation: animation-back-spinner 3s forwards ease-in-out;
+    @keyframes animation-back-spinner {
+        0%{
+            opacity: 0.9;
+            z-index: 5;
+            background: white;
+            
+        }
+        
+        50%{
+            opacity: 0.9;
+            z-index: 5;
+            background: white;
+           
+        }
+        99%{
+            opacity: 0;
+            z-index: 5;
+        }
+        100%{
+            opacity: 0;
+            z-index: -3;
+            background: white;
+            visibility: hidden;
+           
+        }
+    }
+}
+
+@mixin animation-spinner {
+    animation: animation-Spinner-Rotate 3s forwards cubic-bezier(0,-0.06,1,1.26);
+    @keyframes animation-Spinner-Rotate {
+        0%{
+            transform:  rotate(0deg)  ;
+            
+            
+        }
+       
+        100%{
+            transform:  rotate(720deg) ;
+        
+        }
+    }
+}
+
+// breakpoint
+
+@mixin tablette-min {
+    @media screen and (max-width: map-get($breakpoint,tablette)) {
+        @content;
+        
+    }
+}
    
 
 

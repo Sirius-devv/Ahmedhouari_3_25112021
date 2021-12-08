@@ -1,6 +1,9 @@
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
-$colour-accent: #99E2D0;
+$colour-tertiaire:#99E2D0;
+$color-fourth:#35353552;
+$background--1:#f6f6f6;
+$color-loading:#ff00d936;
 $colour-footer: #353535;
 $colour-header:#353535;
 $colour-invalid: #DB464B;
@@ -20,8 +23,12 @@ $margin-menu-containers-title: 40px 0 0PX 10px;
 
 
 
+$border-loading:9px solid;
 
 $margin-number-icon:23px;
 $margin-footer: 24px;
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * .25;
+
+
+$breakpoint:(tablette:768px);
