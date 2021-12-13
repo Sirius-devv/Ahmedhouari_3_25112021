@@ -1,14 +1,14 @@
 @import "utils/variables";
+@import "utils/mixins";
 @import "base/base";
 @import "utils/functions";
-@import "utils/mixins";
 @import "layout/footer";
 @import "pages/index";
 
 header {
   min-width: 240px;
   width: 100%;
-  display: flex;
+  display: flex;  
   justify-content: center;
   height: 60px;
   & a {
@@ -37,12 +37,14 @@ main {
     position: absolute;
     z-index: -1;
     width: 100%;
+    height: 50vh;
+    
     & img {
-      height: auto;
       width: 100%;
       object-fit: cover;
       min-height: 359px;
-      max-height: 359px;
+      height: 100%;
+      max-height: 600vh;
     }
   }
   .section {
@@ -59,6 +61,7 @@ main {
       & h2 {
         font-family: $font-title;
         font-size: 1.6rem;
+        max-width: 72%;
       }
       &__icon {
         position: relative;
@@ -72,9 +75,25 @@ main {
         &__full-heart {
           fill: transparent;
           z-index: 2;
+          cursor: pointer;
           &:active {
             @include animation-heart;
           }
+          @include desktop-min{
+            animation: 3s animation-hover;
+            &:hover{
+              animation: 1s animation-hover-heart linear;
+              fill: url(#grandiente-heart);
+              @keyframes animation-hover-heart {
+                0%{
+                  opacity: 0;
+                }
+                100%{
+                  opacity: 1;
+                }
+              }
+             }
+           }
         }
         &__empty-heart {
           z-index: 1;
@@ -84,6 +103,8 @@ main {
     &__containers__menu {
       padding: 0px 24px;
       font-family: $font-text;
+      &__position{
+        margin: 0px;
       &__title {
         margin: $margin-menu-containers-title;
         & h3 {
@@ -99,10 +120,10 @@ main {
         @include card-menu;
         cursor: pointer;
         &:active {
-          & .section__containers__menu__cards__h3-p {
+          & .section__containers__menu__position__cards__h3-p {
             @include animation-h3-p;
           }
-          & .section__containers__menu__cards__i {
+          & .section__containers__menu__position__cards__i {
             @include animation-icon-green;
           }
           & i {
@@ -135,7 +156,7 @@ main {
         }
         & .price {
           font-weight: bold;
-          width: 10%;
+          width: 13%;
           height: 100%;
           padding-top: 30px;
         }
@@ -151,7 +172,48 @@ main {
             color: white;
           }
         }
+        &:nth-child(2){
+           visibility: hidden;
+          @include animation-menu-apparition;
+        }
+        &:nth-child(3){
+          visibility: hidden;
+          @include animation-menu-apparition;
+          animation-delay: 500ms;
+        }
+        &:nth-child(4){
+          visibility: hidden;
+          @include animation-menu-apparition;
+          animation-delay: 1s;
+        }
+        &:nth-child(5){
+          visibility: hidden;
+          @include animation-menu-apparition;
+          animation-delay: 1.5s;
+        }
+        @include desktop-min{
+          &:hover { 
+            & .section__containers__menu__position__cards__h3-p {
+              @include animation-h3-p;
+            }
+            & .section__containers__menu__position__cards__i {
+              @include animation-icon-green;
+            }
+            & i {
+              @include animation-valid-rotate;
+            }
+          }
+        }
       }
+      @include tablette-min{
+        margin: 7px;
+        width: 80%;
+      }
+    }
+    @include tablette-min{
+      display: flex;
+      justify-content: center;
+    }
     }
 
     &__btn-menu {

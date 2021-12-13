@@ -33,8 +33,7 @@
     <!-- loading-spinner -->
     <div class="loading__spinner__containers">
       <div class="loading__spinner__containers__position">
-        <div class="loading__spinner__containers__position__animation">
-        </div>
+        <div class="loading__spinner__containers__position__animation"></div>
       </div>
     </div>
     <!-- Header -->
@@ -45,7 +44,11 @@
       <div class="section__header__ville">
         <div class="section__header__ville-containers">
           <i class="fas fa-map-marker-alt"></i>
-          <input type="search" class="section__header__ville-containers__input" value="Paris , Belleville">
+          <input
+            type="search"
+            class="section__header__ville-containers__input"
+            value="Paris , Belleville"
+          />
         </div>
       </div>
       <div class="section__header__presentation__explore">
@@ -64,25 +67,27 @@
         </div>
       </div>
     </section>
-
+<!-- main -->
     <main class="main">
       <section class="main__fonctionnement">
         <h2>Fonctionnement</h2>
-        <a href="">
-          <h3>1</h3>
-          <i class="fas fa-mobile-alt"></i>
-          <p>Choisissez un restaurant</p>
-        </a>
-        <a href="">
-          <h3>2</h3>
-          <i class="fas fa-bars"></i>
-          <p>Composez votre menu</p>
-        </a>
-        <a href="">
-          <h3>3</h3>
-          <i class="fas fa-store" id="store"></i>
-          <p>Degustez au restaurant</p>
-        </a>
+        <div class="main__fonctionnement__containers">
+          <a href="">
+            <h3>1</h3>
+            <i class="fas fa-mobile-alt"></i>
+            <p>Choisissez un restaurant</p>
+          </a>
+          <a href="">
+            <h3>2</h3>
+            <i class="fas fa-bars"></i>
+            <p>Composez votre menu</p>
+          </a>
+          <a href="">
+            <h3>3</h3>
+            <i class="fas fa-store" id="store"></i>
+            <p>Degustez au restaurant</p>
+          </a>
+        </div>
       </section>
       <section class="main__Restaurant">
         <h2>Restaurants</h2>
@@ -102,9 +107,7 @@
             </a>
             <div class="main__Restaurant__containers__accueil__card__svg">
               <svg
-                class="
-                  main__Restaurant__containers__accueil__card__svg__heart-full
-                "
+                class="main__Restaurant__containers__accueil__card__svg__heart-full"
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
                 viewBox="0 0 24 24"
@@ -134,12 +137,6 @@
                 <path
                   d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
                 />
-                <defs>
-                  <linearGradient id="grandiente-heart">
-                    <stop offset="0%" stop-color="#ed73da" />
-                    <stop offset="100%" stop-color="#a65cdb" />
-                  </linearGradient>
-                </defs>
               </svg>
             </div>
           </div>
@@ -171,12 +168,6 @@
                 <path
                   d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
                 />
-                <defs>
-                  <linearGradient id="grandiente-heart">
-                    <stop offset="0%" stop-color="#ed73da" />
-                    <stop offset="100%" stop-color="#a65cdb" />
-                  </linearGradient>
-                </defs>
               </svg>
               <svg
                 class="main__Restaurant__containers__accueil__card__svg__heart"
@@ -190,12 +181,6 @@
                 <path
                   d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
                 />
-                <defs>
-                  <linearGradient id="grandiente-heart">
-                    <stop offset="0%" stop-color="#ed73da" />
-                    <stop offset="100%" stop-color="#a65cdb" />
-                  </linearGradient>
-                </defs>
               </svg>
             </div>
           </div>
@@ -227,12 +212,6 @@
                 <path
                   d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
                 />
-                <defs>
-                  <linearGradient id="grandiente-heart">
-                    <stop offset="0%" stop-color="#ed73da" />
-                    <stop offset="100%" stop-color="#a65cdb" />
-                  </linearGradient>
-                </defs>
               </svg>
               <svg
                 class="main__Restaurant__containers__accueil__card__svg__heart"
@@ -246,12 +225,6 @@
                 <path
                   d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
                 />
-                <defs>
-                  <linearGradient id="grandiente-heart">
-                    <stop offset="0%" stop-color="#ed73da" />
-                    <stop offset="100%" stop-color="#a65cdb" />
-                  </linearGradient>
-                </defs>
               </svg>
             </div>
           </div>
@@ -283,12 +256,6 @@
                 <path
                   d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
                 />
-                <defs>
-                  <linearGradient id="grandiente-heart">
-                    <stop offset="0%" stop-color="#ed73da" />
-                    <stop offset="100%" stop-color="#a65cdb" />
-                  </linearGradient>
-                </defs>
               </svg>
               <svg
                 class="main__Restaurant__containers__accueil__card__svg__heart"
@@ -302,12 +269,6 @@
                 <path
                   d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
                 />
-                <defs>
-                  <linearGradient id="grandiente-heart">
-                    <stop offset="0%" stop-color="#ed73da" />
-                    <stop offset="100%" stop-color="#a65cdb" />
-                  </linearGradient>
-                </defs>
               </svg>
             </div>
           </div>

@@ -1,46 +1,41 @@
 @import "../utils/variables";
 
-.footer{
-    min-width: 240px;
-    width: 100%;
-    height: 200px;
-    color: white;
-    background: $colour-footer;
-    display: flex;
-    flex-direction: column;
-    
-    & h2{
-        margin: 25px 0 8px $margin-footer;
-       
-        & img{
-            height: 21px;
-            color: white;
-        }
-    } 
-   
-    & p{
-        margin:7px 0 0  $margin-footer;
-        & i{
-            font-size: 14px;
-            margin-right: 12px;
-        } 
-        & a{
-            text-decoration: none;
-            color: white;
-            &:visited{
+.footer {
+  min-width: 240px;
+  width: 100%;
+  height: 200px;
+  color: white;
+  background: $colour-footer;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-text;
+  font-weight: bold;
+  & h2 {
+    margin: 25px 0 8px $margin-footer;
+
+    & img {
+      height: 21px;
+      color: white;
+    }
+  }
+  & p {
+    margin: 7px 0 0 $margin-footer;
+    & i {
+      font-size: 14px;
+      margin-right: 12px;
+    }
+    & a {
+      text-decoration: none;
+      color: white;
+      &:visited {
         color: white;
-        text-decoration: none; 
-            }
-      
+        text-decoration: none;
+      }
     }
-
+  }
+  & :nth-child(3) {
+    i {
+      font-size: 10px;
     }
-    & :nth-child(3){
-        i{
-            font-size: 10px;
-        }
-    }
-    
-    
-
+  }
 }

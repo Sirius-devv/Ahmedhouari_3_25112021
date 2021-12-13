@@ -134,10 +134,10 @@
     }
     }
     @mixin animation-h3-p {
-            animation: animation-h3p 1s forwards;
+            animation: animation-h3p 800ms forwards;
         @keyframes animation-h3p  {
             0%{
-                width: 83%;
+                width: 82%;
             }
             100%{
                 width: 70%;
@@ -147,13 +147,13 @@
         
     }
     @mixin animation-icon-green {
-        animation: animation-icon__valid 1s forwards ease-in-out;
+        animation: animation-icon__valid 800ms forwards ease-in-out;
     @keyframes animation-icon__valid  {
         0%{
             width: 0%;
         }
         100%{
-            width: 20%;
+            width: 18%;
         }
     }
 
@@ -216,98 +216,36 @@
         }
     }
 }
+@mixin animation-menu-apparition {
+    animation: animation-apparition 500ms  forwards ;
+    @keyframes animation-apparition {
+        0%{
+            visibility: hidden;
+            transform: translatey(10px);
+            opacity: 0;
+        }
+        100%{
+            visibility: visible;
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
 
 // breakpoint
 
 @mixin tablette-min {
-    @media screen and (max-width: map-get($breakpoint,tablette)) {
+    @media screen and (min-width: map-get($breakpoint,tablette)) {
         @content;
         
     }
 }
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
-    text-shadow: $offset $offset $colour;
-}
-
-@mixin border($colour:$colour-primary) {
-    border: .1rem solid $colour;
-}
-
-@mixin img-ratio {
-    width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-        }
-}
-
-@mixin btn {
-    padding: $grid-gutter;
-    @include border;
-    color: $colour-primary;
-    background: $colour-secondary;
-    cursor: pointer;
-    &:hover{
-        background: $colour-primary;
-        color: $colour-accent;
-    }
-    &--full-width {
-        width: 100%;
-        margin: 0 auto;
+@mixin desktop-min {
+    @media screen and (min-width: map-get($breakpoint-desktop,desktop)) {
+        @content;
     }
 }
-@mixin card__acueil($color) {
-    border: blue 2px solid;
-    padding: 10px;
-    width: 100%;
-    margin: 40px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-@mixin h2-{
 
-}
+
+
+
