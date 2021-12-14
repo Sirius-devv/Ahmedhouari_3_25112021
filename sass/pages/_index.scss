@@ -103,6 +103,9 @@
       }
     }
   }
+  @include max-width-1900px{
+    max-width: 1900px;
+  }
 }
 // main
 .main {
@@ -272,5 +275,8 @@
       flex-direction: column;
       align-items: center;
     }
+  }
+  @include max-width-1900px{
+    max-width: 1900px;
   }
 }

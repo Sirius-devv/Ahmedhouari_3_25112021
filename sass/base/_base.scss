@@ -1,6 +1,9 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    @include max-width-1900px{
+        text-align: -webkit-center;
+    }
 }
 *::after,
 *::before {

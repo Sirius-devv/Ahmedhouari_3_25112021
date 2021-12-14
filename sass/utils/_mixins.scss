@@ -226,3 +226,8 @@
     @content;
   }
 }
+@mixin max-width-1900px {
+    @media screen and (min-width: map-get($breakpoint-1900px,max-body)) {
+      @content;
+    }
+}

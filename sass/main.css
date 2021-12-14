@@ -4,6 +4,12 @@
           box-sizing: border-box;
 }
 
+@media screen and (min-width: 1900px) {
+  * {
+    text-align: -webkit-center;
+  }
+}
+
 *::after,
 *::before {
   margin: 0;
@@ -57,6 +63,12 @@
 
 .footer :nth-child(3) i {
   font-size: 10px;
+}
+
+@media screen and (min-width: 1900px) {
+  .footer {
+    max-width: 1900px;
+  }
 }
 
 .loading__spinner__containers {
@@ -146,7 +158,7 @@
   width: 100px;
   border: 4px solid transparent;
   border-radius: 50px;
-  border-top: 9px solid #9356DC;
+  border-top: 9px solid #9356dc;
   border-bottom: 9px solid #ff00d936;
   border-left: 9px solid #ff00d936;
   border-right: 9px solid #ff00d936;
@@ -298,6 +310,12 @@
   transition: 1s;
 }
 
+@media screen and (min-width: 1900px) {
+  .section__header {
+    max-width: 1900px;
+  }
+}
+
 .main {
   min-width: 240px;
   height: auto;
@@ -334,7 +352,7 @@
 
 .main__fonctionnement__containers a h3 {
   color: white;
-  background: #9356DC;
+  background: #9356dc;
   width: 30px;
   height: 30px;
   border-radius: 60px;
@@ -377,7 +395,7 @@
 .main__fonctionnement__containers a:hover i {
   -webkit-transition: 2s;
   transition: 2s;
-  color: #9356DC;
+  color: #9356dc;
 }
 
 @media screen and (min-width: 768px) {
@@ -658,6 +676,12 @@
   }
 }
 
+@media screen and (min-width: 1900px) {
+  .main {
+    max-width: 1900px;
+  }
+}
+
 header {
   min-width: 240px;
   width: 100%;
@@ -715,6 +739,12 @@ main .img__main img {
   min-height: 359px;
   height: 100%;
   max-height: 600vh;
+}
+
+@media screen and (min-width: 1900px) {
+  main .img__main {
+    max-width: 1900px;
+  }
 }
 
 main .section {
@@ -822,7 +852,7 @@ main .section__containers__menu__position {
 }
 
 main .section__containers__menu__position__title {
-  margin: 40px 0 0PX 10px;
+  margin: 40px 0 0px 10px;
 }
 
 main .section__containers__menu__position__title h3 {
@@ -968,7 +998,7 @@ main .section__containers__menu__position__cards__i {
   overflow: hidden;
   height: 100%;
   width: 0%;
-  background: #99E2D0;
+  background: #99e2d0;
   border-radius: 0 12px 12px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -988,8 +1018,8 @@ main .section__containers__menu__position__cards__i i {
 
 main .section__containers__menu__position__cards:nth-child(2) {
   visibility: hidden;
-  -webkit-animation: animation-apparition 500ms  forwards;
-          animation: animation-apparition 500ms  forwards;
+  -webkit-animation: animation-apparition 500ms forwards;
+          animation: animation-apparition 500ms forwards;
 }
 
 @-webkit-keyframes animation-apparition {
@@ -1024,8 +1054,8 @@ main .section__containers__menu__position__cards:nth-child(2) {
 
 main .section__containers__menu__position__cards:nth-child(3) {
   visibility: hidden;
-  -webkit-animation: animation-apparition 500ms  forwards;
-          animation: animation-apparition 500ms  forwards;
+  -webkit-animation: animation-apparition 500ms forwards;
+          animation: animation-apparition 500ms forwards;
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
 }
@@ -1047,8 +1077,8 @@ main .section__containers__menu__position__cards:nth-child(3) {
 
 main .section__containers__menu__position__cards:nth-child(4) {
   visibility: hidden;
-  -webkit-animation: animation-apparition 500ms  forwards;
-          animation: animation-apparition 500ms  forwards;
+  -webkit-animation: animation-apparition 500ms forwards;
+          animation: animation-apparition 500ms forwards;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
@@ -1070,8 +1100,8 @@ main .section__containers__menu__position__cards:nth-child(4) {
 
 main .section__containers__menu__position__cards:nth-child(5) {
   visibility: hidden;
-  -webkit-animation: animation-apparition 500ms  forwards;
-          animation: animation-apparition 500ms  forwards;
+  -webkit-animation: animation-apparition 500ms forwards;
+          animation: animation-apparition 500ms forwards;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
@@ -1208,5 +1238,11 @@ main .section__btn-menu button:hover {
   -webkit-transition: 1s;
   transition: 1s;
   opacity: 1;
+}
+
+@media screen and (min-width: 1900px) {
+  main {
+    max-width: 1900px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
