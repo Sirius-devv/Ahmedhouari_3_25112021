@@ -1,34 +1,37 @@
-$colour-primary: #9356DC;
-$colour-secondary: #FF79DA;
-$colour-tertiaire:#99E2D0;
-$color-fourth:#35353552;
-$background--1:#f6f6f6;
-$color-loading:#ff00d936;
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiaire: #99e2d0;
+$color-fourth: #35353552;
+$background--1: #f6f6f6;
+$color-loading: #ff00d936;
 $colour-footer: #353535;
-$colour-header:#353535;
-$colour-invalid: #DB464B;
-$color-number:white;
-$color-gradiente:linear-gradient(#ed73da, #a65cdb);
-$color-btn-header:#f6f6f6;
-$color-text-brightness:#7e7e7e;
-$font-text:'Roboto', sans-serif;
-$font-title:'Shrikhand', cursive;
-$color-3-accueil:#f6f6f6;
-$color-animation-menu:#99e2d0;
-$background-card:white;
-$color-after:#99e2d0;
-$color-after-text:#008766;
-$dark:rgba(0, 0, 0, 0.041);
-$margin-menu-containers-title: 40px 0 0PX 10px;
-
-
-
-$border-loading:9px solid;
-
-$margin-number-icon:23px;
+$colour-header: #353535;
+$colour-invalid: #db464b;
+$color-number: white;
+$color-gradiente: linear-gradient(#ed73da, #a65cdb);
+$color-btn-header: #f6f6f6;
+$color-text-brightness: #7e7e7e;
+$color-3-accueil: #f6f6f6;
+$color-animation-menu: #99e2d0;
+$background-card: white;
+$color-after: #99e2d0;
+$color-after-text: #008766;
+$dark: rgba(0, 0, 0, 0.041);
+// font text
+$font-text: "Roboto", sans-serif;
+$font-title: "Shrikhand", cursive;
+// border
+$border-loading: 9px solid;
+// margin
+$margin-menu-containers-title: 40px 0 0px 10px;
+$margin-number-icon: 23px;
 $margin-footer: 24px;
 $layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;
-
-
-$breakpoint:(tablette:768px);
+$grid-gutter: $layout-margin * 0.25;
+// breakpoint
+$breakpoint: (
+  tablette: 768px,
+);
+$breakpoint-desktop: (
+  desktop: 992px,
+);

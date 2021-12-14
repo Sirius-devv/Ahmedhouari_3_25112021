@@ -1,7 +1,7 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-      //  loading-spinner
+//  loading-spinner
 .loading__spinner__containers {
   position: fixed;
   width: 100%;
@@ -9,7 +9,6 @@
   background: white;
   @include flex-align-justify__center;
   @include animation-background-spinner;
-  
 
   &__position {
     background: transparent;
@@ -25,14 +24,14 @@
       border: 4px solid transparent;
       border-radius: 50px;
       border-top: $border-loading $colour-primary;
-      border-bottom: $border-loading  $color-loading;
-      border-left: $border-loading  $color-loading;
-      border-right: $border-loading  $color-loading;
+      border-bottom: $border-loading $color-loading;
+      border-left: $border-loading $color-loading;
+      border-right: $border-loading $color-loading;
       @include animation-spinner;
     }
   }
 }
-      // header
+// header
 .section__header {
   min-width: 240px;
   border-top: $color-fourth 3px solid;
@@ -116,40 +115,49 @@
     & h2 {
       @include accueil-h2;
     }
-    & a {
-      @include accueil-btn;
+    &__containers {
+      & a {
+        @include accueil-btn;
 
-      & h3 {
-        color: $color-number;
-        background: $colour-primary;
-        width: 30px;
-        height: 30px;
-        border-radius: 60px;
-        margin-left: -12px;
-        font-family: $font-text;
-        font-size: 15px;
-        @include flex-align-justify__center;
-      }
-      & i {
-        margin-left: $margin-number-icon;
-        font-size: 20px;
-      }
-      & #store {
-        font-size: 15px;
-      }
-      & p {
-        margin-left: $margin-number-icon;
-        color: black;
-        font-family: $font-text;
-        font-weight: bold;
-      }
-      &:hover {
-        background-color: #f2e8ff;
-        transition: 3s;
-        & i {
-          transition: 2s;
-          color: $colour-primary;
+        & h3 {
+          color: $color-number;
+          background: $colour-primary;
+          width: 30px;
+          height: 30px;
+          border-radius: 60px;
+          margin-left: -12px;
+          font-family: $font-text;
+          font-size: 15px;
+          @include flex-align-justify__center;
         }
+        & i {
+          margin-left: $margin-number-icon;
+          font-size: 20px;
+        }
+        & #store {
+          font-size: 15px;
+        }
+        & p {
+          margin-left: $margin-number-icon;
+          color: black;
+          font-family: $font-text;
+          font-weight: bold;
+        }
+        &:hover {
+          background-color: #f2e8ff;
+          transition: 3s;
+          & i {
+            transition: 2s;
+            color: $colour-primary;
+          }
+        }
+        @include tablette-min {
+          margin: 20px 10px 0 20px;
+        }
+      }
+      @include tablette-min {
+        display: flex;
+        flex-direction: row;
       }
     }
   }
@@ -168,6 +176,7 @@
       justify-content: space-around;
       align-items: center;
       padding-bottom: 66px;
+
       &__card {
         @include containers-card-accueil;
         max-width: 500px;
@@ -189,6 +198,9 @@
           }
           & img {
             @include img-accueil;
+            @include tablette-min {
+              height: 220px;
+            }
           }
           & .underpictures__accueil {
             @include underpic-accueil;
@@ -206,23 +218,59 @@
           position: absolute;
           left: 83%;
           bottom: 56px;
+          cursor: pointer;
           & svg {
             position: absolute;
             width: 28px;
             height: 28px;
           }
           &__heart-full {
-            z-index: 2;
+            z-index: 3;
             fill: transparent;
             &:active {
               @include animation-heart;
+            }
+            @include desktop-min {
+              animation: 3s animation-hover;
+              &:hover {
+                animation: 1s animation-hover-heart linear;
+                fill: url(#grandiente-heart);
+                @keyframes animation-hover-heart {
+                  0% {
+                    opacity: 0;
+                  }
+                  100% {
+                    opacity: 1;
+                  }
+                }
+              }
             }
           }
           &__heart {
             z-index: 1;
           }
         }
+        @include tablette-min {
+          max-width: 371px;
+          margin-top: 31px;
+        }
+        @include desktop-min {
+          max-width: 429px;
+        }
       }
+      @include tablette-min {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      @include desktop-min {
+        max-width: 1286px;
+      }
+    }
+    @include desktop-min {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

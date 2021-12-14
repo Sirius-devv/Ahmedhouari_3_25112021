@@ -1,313 +1,228 @@
 @import "../utils/variables";
 @import "../utils/functions";
- 
 
 @mixin accueil-h2 {
-    font-size: 1.3rem;
-    font-family: $font-text;
-    margin: 0px 0 26px 20px;
+  font-size: 1.3rem;
+  font-family: $font-text;
+  margin: 0px 0 26px 20px;
 }
 
 @mixin accueil-btn {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    box-shadow:#dcdcdc 0px 2px 8px 1px;
-    width: 90%;
-    height: 70px;
-    margin:20px 0 0 20px;
-    color: $color-text-brightness;
-    background: $color-btn-header;
-    border-radius: 25px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: #dcdcdc 0px 2px 8px 1px;
+  width: 90%;
+  height: 70px;
+  margin: 20px 0 0 20px;
+  color: $color-text-brightness;
+  background: $color-btn-header;
+  border-radius: 25px;
 }
 @mixin flex-align-justify__center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@mixin containers-card-accueil{
-    height: auto;
-    width: 90%;
-    background: #ffffff;
-    border-radius: 17px 17px 17px 17px;
-    margin-top: 20px;
+@mixin containers-card-accueil {
+  height: auto;
+  width: 90%;
+  background: #ffffff;
+  border-radius: 17px 17px 17px 17px;
+  margin-top: 20px;
 }
 @mixin containers-after {
-          content: "Nouveau";
-          background: $color-after;
-          position: absolute;
-          color: $color-after-text;
-          right: 15px;
-          top: 15px;
-          z-index: 2;
-          width: 78px;
-          height: 31px;
-          border-radius: 5px;
+  content: "Nouveau";
+  background: $color-after;
+  position: absolute;
+  color: $color-after-text;
+  right: 15px;
+  top: 15px;
+  z-index: 2;
+  width: 78px;
+  height: 31px;
+  border-radius: 5px;
 }
 @mixin img-accueil {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-    border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0px 0px;
 }
 @mixin underpic-accueil {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    width: 100%;
-    position: relative;
-    border-radius: 0 0 12px 12px;
-    padding: 11px 20px 15px 14px;
-    font-family: $font-text;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  border-radius: 0 0 12px 12px;
+  padding: 11px 20px 15px 14px;
+  font-family: $font-text;
 }
 @mixin animation-heart {
-    background: orange;
-    animation: heart 4s forwards  ;
-    transform: scaleY(0);
-    height: 30px;
-    width: 30px;
-    @keyframes heart {
-        10%{
-            transform: scaleY(0.5);
-        }
-        100%{
-            transform: scaleY(1);
-        }
+  background: orange;
+  animation: heart 4s forwards;
+  transform: scaleY(0);
+  height: 30px;
+  width: 30px;
+  @keyframes heart {
+    10% {
+      transform: scaleY(0.5);
     }
+    100% {
+      transform: scaleY(1);
+    }
+  }
 }
 @mixin visited {
-    &:visited{
-        color: black;
-    }
-    
+  &:visited {
+    color: black;
+  }
 }
 @mixin card-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    width: 100%;
-    height: 64px;
-    position: relative;
-    background-color: $background-card;
-    box-shadow: $dark 0px 1px 8px 3px;
-    margin-top: 12px;
-    border-radius: 12px;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  position: relative;
+  background-color: $background-card;
+  box-shadow: $dark 0px 1px 8px 3px;
+  margin-top: 12px;
+  border-radius: 12px;
+  padding: 0;
 }
 
-
 @mixin btn-brightness {
-    max-width: 310px;
-    border: none;
-    text-decoration: none;
-    background: $color-gradiente;
-    height: 46px;
-    width: 53%;
-    border-radius: 30px;
-    color: $color-btn-header;
-    font-size: 0.9rem;
-    
+  max-width: 310px;
+  border: none;
+  text-decoration: none;
+  background: $color-gradiente;
+  height: 46px;
+  width: 53%;
+  border-radius: 30px;
+  color: $color-btn-header;
+  font-size: 0.9rem;
 }
 
 @mixin svg-menu {
-
-    height: 32px;
-    width: 57px;
-    position: absolute;
-    
+  height: 32px;
+  width: 57px;
+  position: absolute;
 }
 @mixin animation-heart {
-    animation: animation-heart 500ms ease-in-out forwards;
-    @keyframes animation-heart {
-        0%{
-
-            transform: scaleX(0) scaleY(0);
-            fill: url(#grandiente-heart);
-        }
-       
-        100%{
-            transform: scaleX(1) scaleY(1);
-            fill: url(#grandiente-heart);
-        }
-    }
-    }
-    @mixin animation-h3-p {
-            animation: animation-h3p 1s forwards;
-        @keyframes animation-h3p  {
-            0%{
-                width: 83%;
-            }
-            100%{
-                width: 70%;
-            }
-        }
-    
-        
-    }
-    @mixin animation-icon-green {
-        animation: animation-icon__valid 1s forwards ease-in-out;
-    @keyframes animation-icon__valid  {
-        0%{
-            width: 0%;
-        }
-        100%{
-            width: 20%;
-        }
+  animation: animation-heart 500ms ease-in-out forwards;
+  @keyframes animation-heart {
+    0% {
+      transform: scaleX(0) scaleY(0);
+      fill: url(#grandiente-heart);
     }
 
-    
+    100% {
+      transform: scaleX(1) scaleY(1);
+      fill: url(#grandiente-heart);
+    }
+  }
+}
+@mixin animation-h3-p {
+  animation: animation-h3p 800ms forwards;
+  @keyframes animation-h3p {
+    0% {
+      width: 82%;
+    }
+    100% {
+      width: 70%;
+    }
+  }
+}
+@mixin animation-icon-green {
+  animation: animation-icon__valid 800ms forwards ease-in-out;
+  @keyframes animation-icon__valid {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 18%;
+    }
+  }
 }
 @mixin animation-valid-rotate {
-    animation: rotate-valid 1s forwards ease-in-out;
-    @keyframes rotate-valid {
-        0%{
-            transform: rotate(0deg);
-        }
-        100%{
-            transform: rotate(-360deg);
-        }
+  animation: rotate-valid 1s forwards ease-in-out;
+  @keyframes rotate-valid {
+    0% {
+      transform: rotate(0deg);
     }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
 }
 @mixin animation-background-spinner {
-    
-    animation: animation-back-spinner 3s forwards ease-in-out;
-    @keyframes animation-back-spinner {
-        0%{
-            opacity: 0.9;
-            z-index: 5;
-            background: white;
-            
-        }
-        
-        50%{
-            opacity: 0.9;
-            z-index: 5;
-            background: white;
-           
-        }
-        99%{
-            opacity: 0;
-            z-index: 5;
-        }
-        100%{
-            opacity: 0;
-            z-index: -3;
-            background: white;
-            visibility: hidden;
-           
-        }
+  animation: animation-back-spinner 3s forwards ease-in-out;
+  @keyframes animation-back-spinner {
+    0% {
+      opacity: 0.9;
+      z-index: 5;
+      background: white;
     }
+
+    50% {
+      opacity: 0.9;
+      z-index: 5;
+      background: white;
+    }
+    99% {
+      opacity: 0;
+      z-index: 5;
+    }
+    100% {
+      opacity: 0;
+      z-index: -3;
+      background: white;
+      visibility: hidden;
+    }
+  }
 }
 
 @mixin animation-spinner {
-    animation: animation-Spinner-Rotate 3s forwards cubic-bezier(0,-0.06,1,1.26);
-    @keyframes animation-Spinner-Rotate {
-        0%{
-            transform:  rotate(0deg)  ;
-            
-            
-        }
-       
-        100%{
-            transform:  rotate(720deg) ;
-        
-        }
+  animation: animation-Spinner-Rotate 3s forwards
+    cubic-bezier(0, -0.06, 1, 1.26);
+  @keyframes animation-Spinner-Rotate {
+    0% {
+      transform: rotate(0deg);
     }
+
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+}
+@mixin animation-menu-apparition {
+  animation: animation-apparition 500ms forwards;
+  @keyframes animation-apparition {
+    0% {
+      visibility: hidden;
+      transform: translatey(10px);
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
 // breakpoint
 
 @mixin tablette-min {
-    @media screen and (max-width: map-get($breakpoint,tablette)) {
-        @content;
-        
-    }
+  @media screen and (min-width: map-get($breakpoint,tablette)) {
+    @content;
+  }
 }
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
-    text-shadow: $offset $offset $colour;
-}
-
-@mixin border($colour:$colour-primary) {
-    border: .1rem solid $colour;
-}
-
-@mixin img-ratio {
-    width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-        }
-}
-
-@mixin btn {
-    padding: $grid-gutter;
-    @include border;
-    color: $colour-primary;
-    background: $colour-secondary;
-    cursor: pointer;
-    &:hover{
-        background: $colour-primary;
-        color: $colour-accent;
-    }
-    &--full-width {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-@mixin card__acueil($color) {
-    border: blue 2px solid;
-    padding: 10px;
-    width: 100%;
-    margin: 40px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-@mixin h2-{
-
+@mixin desktop-min {
+  @media screen and (min-width: map-get($breakpoint-desktop,desktop)) {
+    @content;
+  }
 }
